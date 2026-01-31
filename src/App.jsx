@@ -10,7 +10,6 @@ function App() {
     <header>
       <TopHeader />
       <BtmHeader />
-     
     </header>
       
     </>
