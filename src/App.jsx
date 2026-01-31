@@ -1,6 +1,7 @@
 import React from 'react'
 import TopHeader from './components/header/TopHeader.jsx'
 import BtmHeader from './components/header/BtmHeader.jsx'
+import Home from './page/home/Home.jsx'
 
 function App() {
   
@@ -11,6 +12,8 @@ function App() {
       <TopHeader />
       <BtmHeader />
     </header>
+
+    <Home />
       
     </>
   )
