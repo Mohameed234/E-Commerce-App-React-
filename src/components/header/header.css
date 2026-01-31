@@ -77,3 +77,115 @@
     border-radius: 100%;
 
 }
+
+
+
+
+/**
+##############################
+    Start Btm Header CSS
+##############################
+
+**/
+
+
+
+.btm-header{
+    background-color: var(--main-color);
+}
+.btm-header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.btm-header .container .nav{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    height: 50px;
+}
+.btm-header .category-nav{
+    width: 220px;
+    height: 100%;
+    position: relative;
+}
+.btm-header .category-nav .category-nav-list{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--white-color);
+    width: 100%;
+    border: 1px solid #999;
+    border-top: 0;
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+    overflow-y: auto;
+    clip-path: polygon(0 0 , 100% 0, 100% 0, 0 0);
+    transition: 0.3s ease-in-out;
+}
+.btm-header .category-nav .category-nav-list.active{
+    clip-path: polygon(0 0 , 100% 0, 100% 100%, 0 100%);
+
+}
+
+.btm-header .category-nav .category-nav-list a{
+    padding: 14px 10px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 14px;
+
+}
+.btm-header .category-nav .category-nav-list a:last-child{
+    border-bottom: 0;
+}
+.btm-header .category-nav .category-btn{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--main-color);
+    padding: 0 15px;
+    cursor: pointer;
+
+}
+
+.btm-header .category-nav .category-btn svg{
+    fill: var(--white-color);
+}
+.btm-header .category-nav .category-btn p{
+    color: var(--white-color);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.btm-header .nav-links{
+    display: flex;
+    height: 100%;
+}
+
+.btm-header .nav-links li{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+}
+.btm-header .nav-links li.active{
+    background-color: #0079ca;
+}
+.btm-header .nav-links li a{
+    color: var(--white-color);
+}
+
+.btm-header .sign-regs-icon{
+    display: flex;
+    gap: 20px;
+
+}
+
+.btm-header .sign-regs-icon svg{
+    font-size: 22px;
+    fill: var(--white-color);
+}
+
+
