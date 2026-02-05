@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import HeroSlider from "../../components/HeroSlider";
 import SlideProduct from "../../components/slideProducts/SlideProduct";
 import "./home.css";
+import SlideLoading from "../../components/slideProducts/SlideLoading";
 
 const categories = [
   "smartphones",
@@ -46,7 +47,7 @@ function Home() {
       <HeroSlider />
 
       {loading ? (
-        <p>Loading ...</p>
+        <SlideLoading />
       ) : (
         categories.map((category) => (
           <SlideProduct
