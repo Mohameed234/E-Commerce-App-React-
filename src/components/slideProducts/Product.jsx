@@ -2,6 +2,7 @@ import React from "react";
 import { FaStar } from "react-icons/fa6";
 import { FaRegStarHalfStroke } from "react-icons/fa6";
 import { FaShare, FaRegHeart, FaCartPlus } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function product({ item }) {
   console.log(item);
@@ -13,25 +14,27 @@ function product({ item }) {
 
   return (
     <div className="product">
-      <div className="img-product">
-        <img src={item.images[0]} alt="" />
-      </div>
+      <Link to={`/products/${item.id}`}>
+        <div className="img-product">
+          <img src={item.images[0]} alt="" />
+        </div>
 
-      <p className="name-product">{item.title}</p>
+        <p className="name-product">{item.title}</p>
 
-      <div className="stars">
-        {[...Array(fullStars)].map((_, i) => (
-          <FaStar key={i} />
-        ))}
-        {hasHalfStar && <FaRegStarHalfStroke />}
-        {[...Array(emptyStars)].map((_, i) => (
-          <FaStar key={`e-${i}`} style={{ opacity: 0.3 }} />
-        ))}
-      </div>
+        <div className="stars">
+          {[...Array(fullStars)].map((_, i) => (
+            <FaStar key={i} />
+          ))}
+          {hasHalfStar && <FaRegStarHalfStroke />}
+          {[...Array(emptyStars)].map((_, i) => (
+            <FaStar key={`e-${i}`} style={{ opacity: 0.3 }} />
+          ))}
+        </div>
 
-      <p className="price">
-        <span>$ {item.price}</span>
-      </p>
+        <p className="price">
+          <span>$ {item.price}</span>
+        </p>
+      </Link>
 
       <div className="icons">
         <span>

@@ -123,6 +123,7 @@
     overflow-y: auto;
     clip-path: polygon(0 0 , 100% 0, 100% 0, 0 0);
     transition: 0.3s ease-in-out;
+    z-index: 100;
 }
 .btm-header .category-nav .category-nav-list.active{
     clip-path: polygon(0 0 , 100% 0, 100% 100%, 0 100%);
