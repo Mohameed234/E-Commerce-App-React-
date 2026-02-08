@@ -21,6 +21,7 @@
 body{
   background-color: var(--white-color);
   font-family: 'Inter', sans-serif;
+  margin-top: 200px;
 }
 
 img{
