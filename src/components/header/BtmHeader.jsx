@@ -22,7 +22,10 @@ function BtmHeader() {
   const [isCategoriesOpen, setIsCategoriesOpen] = useState(false);
 
 
-  console.log(isCategoriesOpen);
+  useEffect(() => {
+    setIsCategoriesOpen(false)
+  }, [location])
+
   
  
   
@@ -51,7 +54,7 @@ function BtmHeader() {
 
             <div className={`category-nav-list ${isCategoriesOpen ? 'active' : ''}`}>
               {categories.map((category, index) => (
-                <Link to={category.slug} key={index}>
+                <Link to={`/products/category/${category.slug}`} key={index}>
                   {category.name}
                 </Link>
               ))}
@@ -59,8 +62,8 @@ function BtmHeader() {
           </div>
 
           <div className="nav-links">
-            {navLinks.map((navlink) => (
-             <li className={location.pathname === navlink.link ? 'active' : ''}>
+            {navLinks.map((navlink, index) => (
+             <li key={index} className={location.pathname === navlink.link ? 'active' : ''}>
                 <Link to={navlink.link} key={navlink.id}>
                   {navlink.title}
                 </Link>
